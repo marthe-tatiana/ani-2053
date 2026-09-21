@@ -40,10 +40,17 @@ Changes to be committed:
 PS C:\Users\alang_marthe\documents\exo-git> git commit -m "Modification du fichier texte 1"
 [master 11f9401] Modification du fichier texte 1
  1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\alang_marthe\documents\exo-git> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fichier.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
  ```
 
  # Différence entre les trois sorties
 
 ```txt
- La pricncipale différence entre les trois sorties est que lorsqu'on modifie le fichier il est certes modifié dans notre Vscode mais pas dans github,alors lorsqu'on l'ajoute dans github il est automatiquement modifié dans notre ordinateur mais pas dans notre dépot.Et enfin,lorsqu'on commit il est automatiquement modifié dans notre dépot.
+ Après avoir modifié un fichier,la commande "git status" permet de voir son état dans Git.Si le fichier apparait comme modified,celà signifie qu'il a été modifié sur l'ordinateur mais que la modification n'a pas encore préparée pour etre enregistré.La commande git add place ensuite cette modification dans la zone de préparation(staging area).Le fichier apparait alors sous "Changes to be committed",ce qui signifie qu'il est pret à enregistré dans un commit.Enfin,la commande "git commit" enregistre la modification dans l'histoirique local du projet.Si l'on tape ensuite "git status",Git affiche généralement "nothing to commit,work tree clean":cela signifie qu'il n'y'a plus de modification en attente.Pour que cette modification apparaisse également sur Github,il faut terminer par la commande "git push".
  ```
