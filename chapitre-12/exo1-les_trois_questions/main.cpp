@@ -76,9 +76,7 @@ int main(){
 
         std::string filet = "FILET_EXISTANT";
         if (e==0){
-            filet = "FILET_EXISTANT";
-            if (e == 0){
-                filet = "FILET_D_ABORD";
+            filet = "FILET_D_ABORD";
                 filets++;
             }
 
@@ -86,7 +84,7 @@ int main(){
                 prets.push_back(nom);
             }
 
-            std::cout << nom << " " << lieu << " " << toucheTxt << " " << filet << filet << "\n";
+            std::cout << nom << " " << lieu << " " << toucheTxt << " " << filet << "\n";
         }
 
         std::cout << "PURS " << purs << "\n";
@@ -94,12 +92,12 @@ int main(){
         std::cout << "FILETS_A_POSER " << filets << "\n";
         std::cout << "PRETS";
         if (prets.empty()) {
-            std::cout << "AUCUN";
+            std::cout << " AUCUN";
         }else{
             for (const std::string& p : prets){
                 std::cout << " " << p;            }
         }
-    }
-    std::cout << "\n";
+        std::cout << "\n";
     return 0;
-}
+    }
+    
